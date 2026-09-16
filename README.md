@@ -1,71 +1,51 @@
-# TaskFlow
+# Product Catalog Service — Agile Final Project
 
-TaskFlow is a lightweight task and project management web app, built as an Agile final project to demonstrate Scrum practices end to end: product backlog, sprint planning, iterative delivery, and retrospectives.
+This repository is the final project for the Coursera / IBM Skills Network course **"Introduction to Agile Development and Scrum"**. It demonstrates the Agile and Scrum workflow taught in the course — backlog creation and prioritization, issue templates, sprint planning, Gherkin acceptance criteria, and a Kanban board — applied to a hypothetical **Product Catalog Service**.
 
-## Problem statement
+The grading focus for this assignment is the Agile/Scrum *process artifacts*, not a working application, so this repo contains no application code. Everything here is the planning, tracking, and process documentation the course asks for.
 
-Small teams often bounce between sticky notes, spreadsheets, and chat threads to track work. TaskFlow gives a team a single place to create projects, break work into tasks, assign owners, and track status on a simple board, without the overhead of a heavyweight PM tool.
+## Scenario
 
-## Core features
+Stakeholders need a **Product Catalog Service**: a backend service that lets a store manage the products it sells online. The stakeholders submitted the following requirements:
 
-- User accounts with sign up and login
-- Create and manage projects
-- Create tasks within a project (title, description, status, assignee, due date)
-- Kanban-style board view (To Do / In Progress / Done)
-- Task comments and activity history
-- Basic dashboard showing task counts and overdue items
+1. Ability to create products in the catalog
+2. Ability to retrieve products from the catalog
+3. Ability to update products in the catalog
+4. Ability to delete products from the catalog
+5. Ability to "Like" products in the catalog
+6. Ability to "Dislike" products in the catalog
+7. Ability to list all products in the catalog
+8. Ability to query a subset of products in the catalog
+9. Cloud hosting for the service
+10. Automated deployment (CI/CD) to the cloud
 
-## Tech stack
+## Agile artifacts in this repo
 
-| Layer | Choice |
+| Course task | Where it lives |
 |---|---|
-| Frontend | React |
-| Backend | Node.js, Express |
-| Database | MongoDB |
-| Auth | JWT-based session auth |
-| Hosting | TBD (Render / Vercel) |
+| Workspace / board | [GitHub Project: Product Catalog Service](../../projects) |
+| Issue templates | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE) |
+| Issues from stakeholder requests | [Issues](../../issues) |
+| Prioritized backlog / icebox | [`docs/PRODUCT_BACKLOG.md`](docs/PRODUCT_BACKLOG.md) |
+| "As a... I need... so that..." stories | Each issue, using the [user story template](.github/ISSUE_TEMPLATE/user_story.md) |
+| Sprint | [`docs/SPRINT_1_PLAN.md`](docs/SPRINT_1_PLAN.md) and the [Sprint 1 milestone](../../milestones) |
+| Gherkin acceptance criteria | On each Sprint 1 issue |
+| Assigned & moved issues | [Project board](../../projects) — Icebox → Product Backlog → Sprint Backlog → In Progress → Done |
 
-## Project structure
+## Board columns
 
-```
-agile-final-project/
-  docs/
-    PROJECT_CHARTER.md      Problem, objectives, scope, success criteria
-    PRODUCT_BACKLOG.md      Prioritized epics and user stories
-    SPRINT_1_PLAN.md        Sprint 1 goal and sprint backlog
-    DEFINITION_OF_DONE.md   Checklist a story must meet to be marked done
-  client/                   React frontend (added during Sprint 1)
-  server/                   Express backend and API (added during Sprint 1)
-  CONTRIBUTING.md           Branching, commit, and PR conventions
-```
+The GitHub Project uses a Kanban board with these columns:
 
-## Agile process
+- **Icebox** — deprioritized ideas, not scheduled yet
+- **Product Backlog** — prioritized, ready to be pulled into a sprint
+- **Sprint Backlog** — committed to the current sprint
+- **In Progress** — actively being worked on this sprint
+- **Done** — completed
 
-This project is run as two, two-week sprints under a simplified Scrum process (solo developer acting as Product Owner, Scrum Master, and Dev Team):
+## Labels
 
-1. **Backlog** – all planned work lives in [docs/PRODUCT_BACKLOG.md](docs/PRODUCT_BACKLOG.md) and as GitHub Issues, prioritized with MoSCoW.
-2. **Sprint planning** – at the start of each sprint, stories are pulled from the backlog into a sprint plan (see [docs/SPRINT_1_PLAN.md](docs/SPRINT_1_PLAN.md)) based on capacity.
-3. **Execution** – work is tracked on the GitHub Project board (Backlog / To Do / In Progress / In Review / Done).
-4. **Review and retro** – each sprint closes with a short review of what was delivered and a retrospective, logged in the relevant sprint doc.
+- `user-story` — a stakeholder requirement tracked as a GitHub Issue
 
-See [docs/PROJECT_CHARTER.md](docs/PROJECT_CHARTER.md) for the full project scope and success criteria.
+## Author
 
-## Getting started
-
-```
-# clone the repo
-git clone https://github.com/CallsignCiphar/agile-final-project.git
-cd agile-final-project
-
-# backend
-cd server && npm install && npm run dev
-
-# frontend (separate terminal)
-cd client && npm install && npm start
-```
-
-Setup instructions will be filled in as `client/` and `server/` are scaffolded in Sprint 1.
-
-## Status
-
-Project kickoff. Sprint 1 in planning, see the [Project board](../../projects) for live status.
+Maintained by [CallsignCiphar](https://github.com/CallsignCiphar) as a solo submission for the IBM/Coursera Agile & Scrum final project.
