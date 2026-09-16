@@ -1,41 +1,29 @@
-# Sprint 1 Plan
+# Sprint 1 Plan — Product Catalog Service
 
-**Duration:** 2 weeks
-**Sprint goal:** Ship a working walking skeleton: a user can sign up, log in, create a project, and manage tasks inside it.
+## Sprint goal
 
-## Sprint backlog
+Deliver the top 5 Product Catalog Service stakeholder requirements — Create, Retrieve, Update, Delete, and List all products — each with Gherkin acceptance criteria, assigned and moved across the board to demonstrate the Scrum workflow.
 
-| # | User story | Points | Status |
-|---|---|---|---|
-| 1 | Sign up with email and password | 3 | Planned |
-| 2 | Log in and log out | 2 | Planned |
-| 3 | Create a project (name, description) | 3 | Planned |
-| 4 | View list of projects | 2 | Planned |
-| 6 | Create a task (title, description, due date) | 5 | Planned |
-| 7 | Edit or delete a task | 3 | Planned |
+## Sprint backlog (top 5, pulled from the Product Backlog)
 
-**Total committed:** 18 points
+| # | Story | Acceptance criteria (Gherkin) |
+|---|---|---|
+| 1 | As a store manager, I need to create products in the catalog, so that new items can be sold. | **Given** valid product details, **When** I submit a create request, **Then** the product is added to the catalog and returned with a unique ID. |
+| 2 | As a store manager, I need to retrieve a product from the catalog, so that I can view its details. | **Given** a product exists in the catalog, **When** I request it by ID, **Then** its full details are returned. |
+| 3 | As a store manager, I need to update a product in the catalog, so that its information stays accurate. | **Given** a product exists in the catalog, **When** I submit updated details, **Then** the catalog reflects the new information. |
+| 4 | As a store manager, I need to delete a product from the catalog, so that discontinued items are removed. | **Given** a product exists in the catalog, **When** I delete it by ID, **Then** it no longer appears in the catalog. |
+| 5 | As a shopper, I need to list all products in the catalog, so that I can browse everything available. | **Given** the catalog contains products, **When** I request the full list, **Then** all products are returned. |
 
-## Capacity
+Full Gherkin acceptance criteria live on each story's GitHub Issue.
 
-Solo developer, ~10-12 focused hours/week, 2-week sprint. Estimated capacity: ~20-24 hours, which at this team's historical velocity (first sprint, so estimated rather than measured) supports roughly 18-20 points.
+## Board movement
 
-## Definition of Ready (stories pulled into this sprint)
+Per the assignment's "assign and move issues" step, Sprint 1 issues are:
 
-Each story above has: a clear user-story statement, acceptance criteria (tracked on its GitHub Issue), and no open blocking questions.
+- Assigned to [CallsignCiphar](https://github.com/CallsignCiphar)
+- Moved from **Product Backlog** → **Sprint Backlog** when pulled into the sprint
+- Moved to **In Progress** / **Done** on the board to demonstrate real movement through the workflow
 
-## Daily check-in log
+## Deferred to a later sprint
 
-A short daily note (what was done, what's next, any blockers) is kept in the corresponding GitHub Issue for each story rather than duplicated here, to keep a single source of truth per story.
-
-## Sprint review (fill in at sprint close)
-
-- Stories completed:
-- Stories carried over:
-- Demo notes:
-
-## Sprint retrospective (fill in at sprint close)
-
-- What went well:
-- What didn't go well:
-- One process change to carry into Sprint 2:
+Query a subset of products and cloud hosting remain in the **Product Backlog** (not iced, but not in Sprint 1) since they build on the core CRUD/list operations delivered in this sprint.

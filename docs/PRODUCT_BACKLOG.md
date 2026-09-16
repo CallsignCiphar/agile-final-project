@@ -1,53 +1,29 @@
-# Product Backlog: TaskFlow
+# Product Backlog — Product Catalog Service
 
-Prioritized with MoSCoW (Must / Should / Could / Won't). Story points use a Fibonacci-like scale (1, 2, 3, 5, 8). Each story below is also tracked as a GitHub Issue for execution.
+All 10 stakeholder requirements, triaged into the **Product Backlog** (prioritized, ready to be pulled into a sprint) and the **Icebox** (deprioritized, not scheduled). Each item is tracked as a GitHub Issue using the `user-story` label and the "As a... I need... so that..." template.
 
-## Epic 1: Authentication
+## Product Backlog (prioritized)
 
-| # | User story | Priority | Points | Sprint |
-|---|---|---|---|---|
-| 1 | As a new user, I want to sign up with email and password so that I can create an account. | Must | 3 | 1 |
-| 2 | As a returning user, I want to log in and log out so that my sessions are secure. | Must | 2 | 1 |
+| Priority | Stakeholder requirement | Story |
+|---|---|---|
+| 1 | Create products in the catalog | As a store manager, I need to create products in the catalog, so that new items can be sold. |
+| 2 | Retrieve products from the catalog | As a store manager, I need to retrieve a product from the catalog, so that I can view its details. |
+| 3 | Update products in the catalog | As a store manager, I need to update a product in the catalog, so that its information stays accurate. |
+| 4 | Delete products from the catalog | As a store manager, I need to delete a product from the catalog, so that discontinued items are removed. |
+| 5 | List all products in the catalog | As a shopper, I need to list all products in the catalog, so that I can browse everything available. |
+| 6 | Query a subset of products in the catalog | As a shopper, I need to query a subset of products in the catalog, so that I can find products matching specific criteria. |
+| 7 | Cloud hosting for the service | As a product owner, I need the service hosted in the cloud, so that it is reliably available to customers. |
 
-## Epic 2: Project management
+Items 1–5 are pulled into **Sprint 1** — see [`SPRINT_1_PLAN.md`](SPRINT_1_PLAN.md).
 
-| # | User story | Priority | Points | Sprint |
-|---|---|---|---|---|
-| 3 | As a user, I want to create a project with a name and description so that I can group related tasks. | Must | 3 | 1 |
-| 4 | As a user, I want to view a list of my projects so that I can navigate between them. | Must | 2 | 1 |
-| 5 | As a user, I want to edit or delete a project so that I can keep my workspace accurate. | Should | 2 | 2 |
+## Icebox (deprioritized for now)
 
-## Epic 3: Task management
+| Requirement | Story | Reason iced |
+|---|---|---|
+| "Like" products in the catalog | As a shopper, I need to like a product, so that I can indicate products I'm interested in. | Nice-to-have engagement feature, not core CRUD |
+| "Dislike" products in the catalog | As a shopper, I need to dislike a product, so that I can indicate products I'm not interested in. | Nice-to-have engagement feature, not core CRUD |
+| Automated deployment to the cloud | As a product owner, I need automated deployment to the cloud, so that new releases ship without manual steps. | Depends on cloud hosting being in place first |
 
-| # | User story | Priority | Points | Sprint |
-|---|---|---|---|---|
-| 6 | As a user, I want to create a task within a project with a title, description, and due date so that I can track work items. | Must | 5 | 1 |
-| 7 | As a user, I want to edit or delete a task so that I can correct mistakes or remove stale work. | Must | 3 | 1 |
-| 8 | As a user, I want to assign a task an owner so that responsibility is clear. | Should | 2 | 2 |
+## Prioritization rationale
 
-## Epic 4: Kanban board
-
-| # | User story | Priority | Points | Sprint |
-|---|---|---|---|---|
-| 9 | As a user, I want to see my project's tasks on a To Do / In Progress / Done board so that I can see status at a glance. | Must | 5 | 2 |
-| 10 | As a user, I want to drag a task card between columns so that updating status is fast. | Should | 5 | 2 |
-
-## Epic 5: Dashboard
-
-| # | User story | Priority | Points | Sprint |
-|---|---|---|---|---|
-| 11 | As a user, I want a dashboard showing task counts by status and overdue tasks so that I know what needs attention. | Should | 3 | 2 |
-
-## Epic 6: Comments and activity (stretch)
-
-| # | User story | Priority | Points | Sprint |
-|---|---|---|---|---|
-| 12 | As a user, I want to leave comments on a task so that I can log context or decisions. | Could | 3 | Backlog (unscheduled) |
-| 13 | As a user, I want to see an activity history on a task so that I can see what changed and when. | Won't (this project) | 3 | Backlog (unscheduled) |
-
-## Backlog grooming notes
-
-- Epics 1-3 form the walking skeleton for Sprint 1: without auth, projects, and tasks, there is nothing to put on a board.
-- Epic 4 (board) and Epic 5 (dashboard) are the visible payoff and are scheduled for Sprint 2 once the data model is stable.
-- Epic 6 is explicitly descoped for this project (see Project Charter, out of scope) but kept in the backlog for future iterations.
-- Re-groomed at the end of each sprint; priority and sprint assignment above reflect the latest grooming pass.
+Core CRUD and read operations (create, retrieve, update, delete, list) come first because every other capability depends on them existing. Query/filtering and cloud hosting follow as they extend the core service. Like/Dislike are social/engagement features layered on top of a working catalog, and automated deployment is an optimization of the hosting story — both are valuable but not required to demonstrate the core service, so they sit in the Icebox.
