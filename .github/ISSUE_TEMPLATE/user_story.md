@@ -1,20 +1,18 @@
 ---
 name: User story
-about: A backlog item for TaskFlow
-title: "As a ..., I want ..., so that ..."
+about: A stakeholder requirement for the Product Catalog Service
+title: "As a ..., I need ..., so that ..."
 labels: user-story
 ---
 
-## Story
+## User story
 
-As a [type of user], I want [goal], so that [benefit].
+As a [role], I need [capability], so that [benefit].
 
-## Acceptance criteria
+## Acceptance criteria (Gherkin)
 
-- [ ]
-- [ ]
-- [ ]
+Given [context]
+When [action]
+Then [expected outcome]
 
-## Story points
-
-## Sprint
+## Notes
